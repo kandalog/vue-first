@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.cssreset.css" />
-    <link rel="stylesheet" href="./css/style.cssstyle.css" />
+    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://unpkg.com/vue@3.1.5" defer></script>
     <script src="./js/main.js" type="module"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h2>TOdOリスト</h2>
+      <form v-on:submit.prevent>
+        <input type="text" v-model="newItem" />
+        <button v-on:click="addItem">Add</button>
+      </form>
+      <pre>{{ $data }}</pre>
+    </div>
   </body>
 </html>
